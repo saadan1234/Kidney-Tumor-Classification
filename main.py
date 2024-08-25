@@ -1,0 +1,3 @@
+from src.kidneyClassifier import logger 
+
+logger.info("Welcome to our custom logging.")

@@ -7,7 +7,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Kidney-Tumor-Classification"
 AUTHOR_USER_NAME = "saadan1234"
-SRC_REPO = "Kidney-Tumor-Classification"
+SRC_REPO = "kidneyClassifier"
 AUTHOR_EMAIL = "msaadan.bese21seecs@seecs.edu.pk"
 
 setuptools.setup(
