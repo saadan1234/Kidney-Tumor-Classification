@@ -9,11 +9,13 @@ seaborn
 python-box
 pyYAML
 tqdm
-ensure
-joblib
 types-pyYAML
 scipy
 Flask
 Flask-Cors
 gdown
+ensure
+box 
+yaml 
+joblib
 -e .
