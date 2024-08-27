@@ -50,3 +50,43 @@
 [2024-08-27 21:16:29,732: INFO: common: created directory at: artifacts/data_ingestion]
 [2024-08-27 21:16:29,732: INFO: 1286384308: Downloading data from https://drive.google.com/file/d/1-2Y6sOXk3eLNwpFxXDZCmbSneG39xJie/view?usp=sharing into file artifacts/data_ingestion/data.zip]
 [2024-08-27 21:24:41,576: INFO: 1286384308: Downloaded data from https://drive.google.com/file/d/1-2Y6sOXk3eLNwpFxXDZCmbSneG39xJie/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-27 22:25:41,649: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-08-27 22:25:41,654: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:25:41,660: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:25:41,661: INFO: common: created directory at: artifacts]
+[2024-08-27 22:25:41,662: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:25:41,662: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1-2Y6sOXk3eLNwpFxXDZCmbSneG39xJie/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-27 22:31:58,069: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1-2Y6sOXk3eLNwpFxXDZCmbSneG39xJie/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-27 22:32:11,481: ERROR: main: [Errno 28] No space left on device]
+Traceback (most recent call last):
+  File "c:\Users\dell\Documents\GitHub\Kidney-Tumor-Classification\main.py", line 10, in <module>
+    obj.main()
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\pipeline\stage_01_data_ingestion.py", line 19, in main
+    raise e
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\components\data_ingestion.py", line 46, in extract_zip_file
+    zip_ref.extractall(unzip_path)
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\zipfile.py", line 1701, in extractall
+    self._extract_member(zipinfo, path, pwd)
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\zipfile.py", line 1756, in _extract_member
+    shutil.copyfileobj(source, target)
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\shutil.py", line 200, in copyfileobj
+    fdst_write(buf)
+OSError: [Errno 28] No space left on device
+[2024-08-27 22:45:34,948: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-08-27 22:45:34,948: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:45:34,948: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:45:34,948: INFO: common: created directory at: artifacts]
+[2024-08-27 22:45:34,948: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:45:34,948: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1-2Y6sOXk3eLNwpFxXDZCmbSneG39xJie/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-27 22:53:15,319: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-08-27 22:53:15,329: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-27 22:53:15,342: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-27 22:53:15,343: INFO: common: created directory at: artifacts]
+[2024-08-27 22:53:15,343: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-27 22:53:15,343: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1-2Y6sOXk3eLNwpFxXDZCmbSneG39xJie/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-27 22:59:56,932: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1-2Y6sOXk3eLNwpFxXDZCmbSneG39xJie/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-27 23:00:22,603: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x=============x]
