@@ -966,3 +966,29 @@ Traceback (most recent call last):
                        ^^^^^^^^^^^
 AttributeError: 'PredictionPipeline' object has no attribute 'config'
 [2024-08-30 23:48:48,777: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:48:48] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-08-30 23:49:50,143: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.146:8080]
+[2024-08-30 23:49:50,143: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-30 23:49:52,143: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:49:52] "GET / HTTP/1.1" 200 -]
+[2024-08-30 23:49:55,918: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:49:57,766: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:49:57] "POST /predict HTTP/1.1" 200 -]
+[2024-08-30 23:50:10,100: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:50:11,505: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:50:11] "POST /predict HTTP/1.1" 200 -]
+[2024-08-30 23:50:17,641: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:50:19,054: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:50:19] "POST /predict HTTP/1.1" 200 -]
+[2024-08-30 23:50:27,717: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:50:29,075: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:50:29] "POST /predict HTTP/1.1" 200 -]
+[2024-08-30 23:50:51,133: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:50:52,449: WARNING: polymorphic_function: 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002296F6C4FE0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-08-30 23:50:52,471: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:50:52] "POST /predict HTTP/1.1" 200 -]
+[2024-08-30 23:51:00,804: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:51:02,175: WARNING: polymorphic_function: 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002296F6C44A0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-08-30 23:51:02,182: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:51:02] "POST /predict HTTP/1.1" 200 -]
+[2024-08-30 23:51:07,214: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:51:08,649: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:51:08] "POST /predict HTTP/1.1" 200 -]
+[2024-08-30 23:51:14,204: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:51:15,420: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:51:15] "POST /predict HTTP/1.1" 200 -]
+[2024-08-30 23:51:21,013: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:51:22,366: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:51:22] "POST /predict HTTP/1.1" 200 -]
