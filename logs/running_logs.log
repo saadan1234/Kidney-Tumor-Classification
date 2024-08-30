@@ -704,3 +704,265 @@ x=============x]
 [2024-08-30 23:22:16,649: INFO: common: yaml file: params.yaml loaded successfully]
 [2024-08-30 23:22:16,649: INFO: common: created directory at: artifacts]
 [2024-08-30 23:22:17,065: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:34:33,916: INFO: common: json file saved at: scores.json]
+[2024-08-30 23:34:35,017: INFO: helpers: Accessing as saadan1234]
+[2024-08-30 23:34:35,923: INFO: helpers: Initialized MLflow to track repo "saadan1234/Kidney-Tumor-Classification"]
+[2024-08-30 23:34:35,927: INFO: helpers: Repository saadan1234/Kidney-Tumor-Classification initialized!]
+[2024-08-30 23:35:39,527: INFO: main: >>>>>> stage Model Evaluation Stage completed <<<<<<
+
+x=============x]
+[2024-08-30 23:37:39,872: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.146:8080]
+[2024-08-30 23:37:39,873: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-30 23:40:32,109: INFO: _internal: 127.0.0.1 - - [30/Aug/2024 23:40:32] "GET / HTTP/1.1" 200 -]
+[2024-08-30 23:40:38,514: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\dell\Documents\GitHub\Kidney-Tumor-Classification\app.py", line 36, in predictionRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\pipeline\prediction.py", line 14, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\saving\saving_api.py", line 194, in load_model
+    return legacy_h5_format.load_model_from_hdf5(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\legacy\saving\legacy_h5_format.py", line 116, in load_model_from_hdf5
+    f = h5py.File(filepath, mode="r")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 562, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 235, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py\\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py\\h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = 'model\model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+[2024-08-30 23:40:38,537: INFO: _internal: 127.0.0.1 - - [30/Aug/2024 23:40:38] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-08-30 23:43:05,900: INFO: _internal: 127.0.0.1 - - [30/Aug/2024 23:43:05] "GET / HTTP/1.1" 200 -]
+[2024-08-30 23:43:06,260: INFO: _internal: 127.0.0.1 - - [30/Aug/2024 23:43:06] "GET / HTTP/1.1" 200 -]
+[2024-08-30 23:43:13,490: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\dell\Documents\GitHub\Kidney-Tumor-Classification\app.py", line 36, in predictionRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\pipeline\prediction.py", line 14, in predict
+    model = load_model(os.path.join("training", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\saving\saving_api.py", line 194, in load_model
+    return legacy_h5_format.load_model_from_hdf5(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\legacy\saving\legacy_h5_format.py", line 116, in load_model_from_hdf5
+    f = h5py.File(filepath, mode="r")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 562, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 235, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py\\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py\\h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = 'model\model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+[2024-08-30 23:43:13,502: INFO: _internal: 127.0.0.1 - - [30/Aug/2024 23:43:13] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-08-30 23:43:44,293: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.146:8080]
+[2024-08-30 23:43:44,293: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-30 23:43:48,886: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:43:48] "GET / HTTP/1.1" 200 -]
+[2024-08-30 23:44:01,428: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\dell\Documents\GitHub\Kidney-Tumor-Classification\app.py", line 36, in predictionRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\pipeline\prediction.py", line 14, in predict
+    model = load_model(os.path.join("training", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\saving\saving_api.py", line 194, in load_model
+    return legacy_h5_format.load_model_from_hdf5(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\legacy\saving\legacy_h5_format.py", line 116, in load_model_from_hdf5
+    f = h5py.File(filepath, mode="r")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 562, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 235, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py\\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py\\h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = 'training\model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+[2024-08-30 23:44:01,450: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:44:01] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-08-30 23:45:31,214: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:45:31] "GET / HTTP/1.1" 200 -]
+[2024-08-30 23:45:38,223: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\dell\Documents\GitHub\Kidney-Tumor-Classification\app.py", line 36, in predictionRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\pipeline\prediction.py", line 14, in predict
+    imagename = self.filename
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\saving\saving_api.py", line 194, in load_model
+    return legacy_h5_format.load_model_from_hdf5(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\legacy\saving\legacy_h5_format.py", line 116, in load_model_from_hdf5
+    f = h5py.File(filepath, mode="r")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 562, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 235, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py\\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py\\h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = 'training\model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+[2024-08-30 23:45:38,223: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:45:38] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-08-30 23:47:44,618: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.146:8080]
+[2024-08-30 23:47:44,618: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-30 23:47:50,279: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:47:50] "GET / HTTP/1.1" 200 -]
+[2024-08-30 23:47:58,310: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\dell\Documents\GitHub\Kidney-Tumor-Classification\app.py", line 36, in predictionRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\pipeline\prediction.py", line 12, in predict
+    model = self.load_model(self.config.trained_model_path)
+            ^^^^^^^^^^^^^^^
+AttributeError: 'PredictionPipeline' object has no attribute 'load_model'
+[2024-08-30 23:47:58,317: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:47:58] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-08-30 23:48:42,510: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.146:8080]
+[2024-08-30 23:48:42,510: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-30 23:48:44,588: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:48:44] "GET / HTTP/1.1" 200 -]
+[2024-08-30 23:48:48,759: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\dell\Documents\GitHub\Kidney-Tumor-Classification\app.py", line 36, in predictionRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\pipeline\prediction.py", line 12, in predict
+    model = load_model(self.config.trained_model_path)
+                       ^^^^^^^^^^^
+AttributeError: 'PredictionPipeline' object has no attribute 'config'
+[2024-08-30 23:48:48,777: INFO: _internal: 192.168.100.146 - - [30/Aug/2024 23:48:48] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
