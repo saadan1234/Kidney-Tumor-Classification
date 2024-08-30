@@ -1,3 +1,4 @@
-artifacts/*
+artifacts/prepare_base_model
+artifacts/data_ingestion
 
 *.zip

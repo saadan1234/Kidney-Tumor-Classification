@@ -65,7 +65,7 @@ class Training:
         self.steps_per_epoch = self.train_generator.samples // self.train_generator.batch_size
         self.validation_steps = self.valid_generator.samples // self.valid_generator.batch_size
         self.model.compile(
-            optimizer = tf.keras.optimizers.SGD(),
+            optimizer = tf.keras.optimizers.Adam(),
             loss = tf.keras.losses.CategoricalCrossentropy(),
             metrics=["accuracy"]
         )

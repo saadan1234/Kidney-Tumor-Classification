@@ -593,3 +593,114 @@ x=============x]
 [2024-08-30 16:21:40,084: INFO: main: >>>>>> stage Model Evaluation Stage completed <<<<<<
 
 x=============x]
+[2024-08-30 19:58:16,184: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-08-30 19:58:16,186: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-30 19:58:16,203: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-30 19:58:16,205: INFO: common: created directory at: artifacts]
+[2024-08-30 19:58:16,207: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-08-30 19:58:16,209: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1-2Y6sOXk3eLNwpFxXDZCmbSneG39xJie/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-30 20:05:42,026: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1-2Y6sOXk3eLNwpFxXDZCmbSneG39xJie/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-08-30 20:06:49,986: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x=============x]
+[2024-08-30 20:06:49,987: INFO: main: >>>>>> stage Preparing Base Model Stage started <<<<<<]
+[2024-08-30 20:06:50,003: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-30 20:06:50,069: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-30 20:06:50,086: INFO: common: created directory at: artifacts]
+[2024-08-30 20:06:50,088: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-08-30 20:06:54,869: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-08-30 20:06:57,161: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-08-30 20:06:58,163: INFO: main: >>>>>> stage Preparing Base Model Stage completed <<<<<<
+
+x=============x]
+[2024-08-30 20:06:58,174: INFO: main: >>>>>> stage Model Training Stage started <<<<<<]
+[2024-08-30 20:06:58,238: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-30 20:06:58,292: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-30 20:06:58,340: INFO: common: created directory at: artifacts]
+[2024-08-30 20:06:58,354: INFO: common: created directory at: artifacts\training]
+[2024-08-30 20:07:00,187: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 20:38:07,746: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.146:8080]
+[2024-08-30 20:38:07,749: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-30 20:38:20,670: INFO: _internal: 127.0.0.1 - - [30/Aug/2024 20:38:20] "GET / HTTP/1.1" 200 -]
+[2024-08-30 20:39:00,176: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\dell\Documents\GitHub\Kidney-Tumor-Classification\app.py", line 36, in predictionRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\dell\documents\github\kidney-tumor-classification\src\kidneyClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\saving\saving_api.py", line 194, in load_model
+    return legacy_h5_format.load_model_from_hdf5(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\keras\src\legacy\saving\legacy_h5_format.py", line 116, in load_model_from_hdf5
+    f = h5py.File(filepath, mode="r")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 562, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\miniconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 235, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py\\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py\\h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = 'model\model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+[2024-08-30 20:39:00,217: INFO: _internal: 127.0.0.1 - - [30/Aug/2024 20:39:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-08-30 21:52:56,659: INFO: main: >>>>>> stage Model Training Stage started <<<<<<]
+[2024-08-30 21:52:56,668: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-30 21:52:56,676: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-30 21:52:56,694: INFO: common: created directory at: artifacts]
+[2024-08-30 21:52:56,703: INFO: common: created directory at: artifacts\training]
+[2024-08-30 21:52:57,769: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 22:08:45,588: INFO: main: >>>>>> stage Model Training Stage started <<<<<<]
+[2024-08-30 22:08:45,592: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-30 22:08:45,612: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-30 22:08:45,614: INFO: common: created directory at: artifacts]
+[2024-08-30 22:08:45,619: INFO: common: created directory at: artifacts\training]
+[2024-08-30 22:08:46,339: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 22:22:20,442: INFO: main: >>>>>> stage Model Training Stage started <<<<<<]
+[2024-08-30 22:22:20,444: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-30 22:22:20,457: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-30 22:22:20,458: INFO: common: created directory at: artifacts]
+[2024-08-30 22:22:20,459: INFO: common: created directory at: artifacts\training]
+[2024-08-30 22:22:21,069: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:08:32,438: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-08-30 23:08:32,647: INFO: main: >>>>>> stage Model Training Stage completed <<<<<<
+
+x=============x]
+[2024-08-30 23:08:32,648: INFO: main: >>>>>> stage Model Evaluation Stage started <<<<<<]
+[2024-08-30 23:08:32,654: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-30 23:08:32,658: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-30 23:08:32,659: INFO: common: created directory at: artifacts]
+[2024-08-30 23:08:33,051: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-08-30 23:19:12,949: INFO: common: json file saved at: scores.json]
+[2024-08-30 23:19:12,950: INFO: main: >>>>>> stage Model Evaluation Stage completed <<<<<<
+
+x=============x]
+[2024-08-30 23:22:16,649: INFO: main: >>>>>> stage Model Evaluation Stage started <<<<<<]
+[2024-08-30 23:22:16,649: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-08-30 23:22:16,649: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-08-30 23:22:16,649: INFO: common: created directory at: artifacts]
+[2024-08-30 23:22:17,065: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
