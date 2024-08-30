@@ -10,21 +10,29 @@ class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
         self.config = config
 
-    def download_file(self)-> str:
+    def download_file(self) -> str:
         '''Fetch Data from the url'''
         try:
             dataset_url = self.config.source_URL
             zip_download_dir = self.config.local_data_file
-            os.makedirs("artifacts/data_ingestion", exist_ok = True)
+            os.makedirs("artifacts/data_ingestion", exist_ok=True)
+
+            # Check if the file already exists
+            if os.path.exists(zip_download_dir):
+                logger.info(f"File {zip_download_dir} already exists. Skipping download.")
+                return zip_download_dir
+
             logger.info(f"Downloading data from {dataset_url} into file {zip_download_dir}")
 
             file_id = dataset_url.split("/")[-2]
-            prefix = 'https://drive.google.com/us?/export=download&id='
-            gdown.download(prefix+file_id,zip_download_dir ,quiet=False, fuzzy=True)
+            prefix = 'https://drive.google.com/uc?export=download&id='
+            gdown.download(prefix + file_id, zip_download_dir, quiet=False, fuzzy=True)
 
             logger.info(f"Downloaded data from {dataset_url} into file {zip_download_dir}")
+            return zip_download_dir
 
         except Exception as e:
+            logger.error(f"Error in downloading file: {str(e)}")
             raise e
 
 
@@ -40,6 +48,7 @@ class DataIngestion:
 
         if not zipfile.is_zipfile(self.config.local_data_file): 
             raise ValueError(f"The file {self.config.local_data_file} is not a valid ZIP file.")
+
 
 
         with zipfile.ZipFile(self.config.local_data_file, "r") as zip_ref:
