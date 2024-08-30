@@ -15,7 +15,6 @@ Flask
 Flask-Cors
 gdown
 ensure
-box 
 yaml 
 joblib
 -e .
